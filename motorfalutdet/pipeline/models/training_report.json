@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-10-15T20:58:51Z",
+  "n_train": 464,
+  "n_test": 116,
+  "feature_cols": [
+    "vib_rms_m",
+    "vib_mean_m",
+    "vib_std_m",
+    "vib_rms_b",
+    "vib_std_b",
+    "vib_kurtosis_m",
+    "vib_skew_m",
+    "vib_crest_m",
+    "fft_peak_freq_hz",
+    "fft_peak_mag",
+    "cur_rms_mA",
+    "cur_mean_mA",
+    "cur_std_mA",
+    "temp_motor_C",
+    "rpm_motor",
+    "rpm_delta"
+  ],
+  "class_names": [
+    "Healthy",
+    "Imbalance",
+    "Misalignment",
+    "Overload",
+    "Friction"
+  ],
+  "selected_model": "CNN",
+  "tflite_path": "pipeline\\models\\motor_fault_cnn.tflite",
+  "rf_accuracy": 0.47413793103448276,
+  "rf_macro_f1": 0.3216374269005848,
+  "rf_report": "              precision    recall  f1-score   support\n\n     Healthy       0.47      1.00      0.64        55\n   Imbalance       0.00      0.00      0.00        61\nMisalignment       0.00      0.00      0.00         0\n    Overload       0.00      0.00      0.00         0\n    Friction       0.00      0.00      0.00         0\n\n    accuracy                           0.47       116\n   macro avg       0.09      0.20      0.13       116\nweighted avg       0.22      0.47      0.31       116\n",
+  "cnn_accuracy": 0.6637931034482759,
+  "cnn_macro_f1": 0.31124355096957834,
+  "cnn_report": "              precision    recall  f1-score   support\n\n     Healthy       0.94      0.31      0.47        55\n   Imbalance       0.65      0.98      0.78        61\nMisalignment       0.00      0.00      0.00         0\n    Overload       0.00      0.00      0.00         0\n    Friction       0.00      0.00      0.00         0\n\n    accuracy                           0.66       116\n   macro avg       0.32      0.26      0.25       116\nweighted avg       0.79      0.66      0.63       116\n"
+}
